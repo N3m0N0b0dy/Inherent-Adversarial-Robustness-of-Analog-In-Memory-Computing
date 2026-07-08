@@ -1,6 +1,6 @@
 # Inherent Adversarial Robustness of Analog In-Memory Computing
 
-A simulation framework replicating and extending the results of:
+A simulation framework trying to replicate and extend the results of:
 
 > **"The inherent adversarial robustness of analog in-memory computing"**  
 > Lammie et al., *Nature Communications* 16, 1756 (2025)  
@@ -26,7 +26,7 @@ This project:
 ## Repository Structure
 
 ```
-├── aihwkit_sim.py        # MNIST simulation (FP32 → HWA → Analog inference)
+├── MNIST_sim.py        # MNIST simulation (FP32 → HWA → Analog inference)
 ├── cifar10_sim.py        # CIFAR-10 simulation with ResNet-9
 ├── data/                 # Auto-downloaded datasets (MNIST, CIFAR-10)
 ├── results/              # Saved model checkpoints (.pt files)
@@ -61,7 +61,7 @@ For GPU-accelerated aihwkit installation, follow the [official guide](https://ai
 
 ```bash
 # Full pipeline (train + evaluate)
-python aihwkit_sim.py
+python mnist_sim.py
 
 # Skip training, reuse saved checkpoints
 python aihwkit_sim.py --skip_train
